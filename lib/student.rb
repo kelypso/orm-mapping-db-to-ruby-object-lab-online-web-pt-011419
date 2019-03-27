@@ -45,7 +45,7 @@ class Student
         WHERE students.grade = 9
       SQL
       
-      DB[:conn].execute(sql).collect do |row|
+    DB[:conn].execute(sql).collect do |row|
       self.new_from_db(row)
     end
   end
@@ -57,7 +57,7 @@ class Student
         WHERE students.grade < 12
       SQL
       
-      DB[:conn].execute(sql).collect do |row|
+    DB[:conn].execute(sql).collect do |row|
       self.new_from_db(row)
     end
   end
@@ -68,9 +68,9 @@ class Student
       FROM students
       WHERE students.grade = 10
       LIMIT ?
-      SQL
+    SQL
       
-      DB[:conn].execute(sql).collect do |row|
+    DB[:conn].execute(sql).collect do |row|
       self.new_from_db(row)
     end
   end
@@ -84,7 +84,7 @@ class Student
     SQL
     
     DB[:conn].execute(sql).collect do |row|
-    self.new_from_db(row)
+      self.new_from_db(row)
     end.first
   end
   
@@ -96,7 +96,7 @@ class Student
     SQL
     
     DB[:conn].execute(sql).collect do |row|
-    self.new_from_db(row)
+      self.new_from_db(row)
     end
   end
   
